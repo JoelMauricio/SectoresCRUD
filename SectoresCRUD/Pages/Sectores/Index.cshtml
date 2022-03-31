@@ -1,0 +1,100 @@
+﻿@page
+@model SectoresCRUD.Pages.Sectores.IndexModel
+
+@{
+    ViewData["Title"] = "Sectores";
+}
+
+<h1>Sectores</h1>
+<!--<p>
+    <a asp-page="Create">Create New</a>
+</p>-->
+<style>
+    .grid-container{
+        display:flex;
+        justify-content: space-between;
+    }
+    .searchbar{
+        display:flex;
+        width:max-content;
+        
+    }
+    .box{
+        width:200px;
+    }
+</style>
+
+
+<div class="grid-container">
+    <div>
+    <form>
+        <br />
+        <input type="button" value="Agregar"/>
+        <input type="button" value="Guardar"/>
+        <input type="button" value="Borrar"/><br>
+        <br />
+        <label for="txtNombre">Nombre:</label><br>
+        <input type="text" id="txtNombre" name="txtNombre" class="box"><br>
+        <label for="txtDescripcion" >Descripcion:</label><br>
+        <input type="text" id="txtDescripcion" class="box"><br>
+        <label for="cbEstado">Estado:</label>
+        <input type="checkbox" id="cbEstado"> <br>
+        <label for="txtFechaCreacion">Fecha de Creacion:</label><br>
+        <input type="datetime-local" id="txtFechaCreacion" class="box"> <br>
+        <label for="txtMunicipio">Municipio:</label><br>
+        <input type="text" id="txtMunicipio" class="box"><br>
+    </form>
+</div>
+<div align="right">
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector[0].Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector[0].Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector[0].FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sector[0].Municipio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Sector) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Municipio.Id)
+            </td>
+            <!--
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>-->
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+</div>
+
