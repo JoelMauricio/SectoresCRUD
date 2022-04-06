@@ -1,0 +1,55 @@
+﻿@page
+@model SectoresCRUD.Pages.Municipios.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Municipio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Municipio.Id" />
+            <div class="form-group">
+                <label asp-for="Municipio.ProvinciaId" class="control-label"></label>
+                <select asp-for="Municipio.ProvinciaId" class="form-control" asp-items="ViewBag.ProvinciaId"></select>
+                <span asp-validation-for="Municipio.ProvinciaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Municipio.Nombre" class="control-label"></label>
+                <input asp-for="Municipio.Nombre" class="form-control" />
+                <span asp-validation-for="Municipio.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Municipio.Descripcion" class="control-label"></label>
+                <input asp-for="Municipio.Descripcion" class="form-control" />
+                <span asp-validation-for="Municipio.Descripcion" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Municipio.Estado" /> @Html.DisplayNameFor(model => model.Municipio.Estado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Municipio.FechaCreacion" class="control-label"></label>
+                <input asp-for="Municipio.FechaCreacion" class="form-control" />
+                <span asp-validation-for="Municipio.FechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

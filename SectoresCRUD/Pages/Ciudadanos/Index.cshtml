@@ -1,0 +1,162 @@
+﻿@page
+@model SectoresCRUD.Pages.Ciudadanos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Secuencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].NoCedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Apellido1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Apellido2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].LugarDeNacimientoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].FechaDeNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].FechaDeExpiracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Firma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].CodigoPostal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].RegistroDeNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].EstadoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].FechaCreacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].UsuarioCreacionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].ColegioElectoral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].EstadoCivil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Nacionalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].Ocupacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudadano[0].TipoDeSangre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Ciudadano) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Secuencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoCedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LugarDeNacimientoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaDeNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaDeExpiracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoPostal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegistroDeNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioCreacionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColegioElectoral.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCivil.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacionalidad.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ocupacion.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDeSangre.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

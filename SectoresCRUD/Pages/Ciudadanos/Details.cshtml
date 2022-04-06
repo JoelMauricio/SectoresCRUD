@@ -1,0 +1,151 @@
+﻿@page
+@model SectoresCRUD.Pages.Ciudadanos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Ciudadano</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Secuencia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Secuencia)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.NoCedula)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.NoCedula)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Apellido1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Apellido1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Apellido2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Apellido2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Sexo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Sexo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.LugarDeNacimientoId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.LugarDeNacimientoId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.FechaDeNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.FechaDeNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.FechaDeExpiracion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.FechaDeExpiracion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Firma)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Firma)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Foto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Foto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.CodigoPostal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.CodigoPostal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.RegistroDeNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.RegistroDeNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.EstadoId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.EstadoId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.FechaCreacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.FechaCreacion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.UsuarioCreacionId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.UsuarioCreacionId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.ColegioElectoral)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.ColegioElectoral.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.EstadoCivil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.EstadoCivil.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Nacionalidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Nacionalidad.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.Ocupacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.Ocupacion.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudadano.TipoDeSangre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ciudadano.TipoDeSangre.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Ciudadano.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
